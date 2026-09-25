@@ -1,0 +1,58 @@
+[
+  {
+    "id": "fixture-1",
+    "tournament": "Indore Local Football Cup",
+    "sport": "Football",
+    "date": "2026-09-28",
+    "time": "09:00 AM",
+    "venue": "Nehru Stadium, Indore",
+    "round": "Quarter Final",
+    "teamA": "Indore Warriors",
+    "teamB": "Malwa United",
+    "status": "Upcoming",
+    "scoreA": null,
+    "scoreB": null
+  },
+  {
+    "id": "fixture-2",
+    "tournament": "Indore Local Football Cup",
+    "sport": "Football",
+    "date": "2026-09-28",
+    "time": "11:30 AM",
+    "venue": "Nehru Stadium, Indore",
+    "round": "Quarter Final",
+    "teamA": "City Strikers",
+    "teamB": "Indore Titans",
+    "status": "Upcoming",
+    "scoreA": null,
+    "scoreB": null
+  },
+  {
+    "id": "fixture-3",
+    "tournament": "Indore Open Badminton Tournament",
+    "sport": "Badminton",
+    "date": "2026-10-04",
+    "time": "10:00 AM",
+    "venue": "Malwa Sports Arena, Indore",
+    "round": "Semi Final",
+    "teamA": "Aarav Sharma",
+    "teamB": "Rohan Verma",
+    "status": "Upcoming",
+    "scoreA": null,
+    "scoreB": null
+  },
+  {
+    "id": "fixture-4",
+    "tournament": "Indore Open Badminton Tournament",
+    "sport": "Badminton",
+    "date": "2026-10-04",
+    "time": "12:00 PM",
+    "venue": "Malwa Sports Arena, Indore",
+    "round": "Semi Final",
+    "teamA": "Aditya Jain",
+    "teamB": "Kunal Patel",
+    "status": "Upcoming",
+    "scoreA": null,
+    "scoreB": null
+  }
+]

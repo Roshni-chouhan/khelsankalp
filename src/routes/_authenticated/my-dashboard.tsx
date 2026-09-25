@@ -32,14 +32,15 @@ type Panel = { title: string; items: string[] };
 
 const PANELS: Record<string, Panel> = {
   superadmin: {
-    title: "Super admin control",
-    items: [
-      "Approve or reject membership requests",
-      "Manage sports, teams and tournaments",
-      "Oversee facilities, equipment and certificates",
-      "Review institute-wide analytics",
-    ],
-  },
+  title: "Super admin control",
+  items: [
+    "Approve or reject membership requests",
+    "Manage sports, teams and tournaments",
+    "Oversee facilities, equipment and certificates",
+    "Review institute-wide analytics",
+    "Approve or reject Gallery, Schedule, Fixtures and Calendar access requests",
+  ],
+},
   sports_head: {
     title: "Institute sports head desk",
     items: [
@@ -144,16 +145,26 @@ function MyDashboardPage() {
           )}
 
           <Card className="flex flex-wrap gap-3 p-6">
-            <Button asChild>
-              <Link to="/portal">Open member portal</Link>
-            </Button>
-            <Button asChild variant="outline">
-              <Link to="/tournaments">Tournaments</Link>
-            </Button>
-            <Button asChild variant="outline">
-              <Link to="/dashboard">Analytics</Link>
-            </Button>
-          </Card>
+  <Button asChild>
+    <Link to="/portal">Open member portal</Link>
+  </Button>
+
+  <Button asChild variant="outline">
+    <Link to="/tournaments">Tournaments</Link>
+  </Button>
+
+  <Button asChild variant="outline">
+    <Link to="/dashboard">Analytics</Link>
+  </Button>
+
+  {activeRoles.includes("superadmin") ? (
+    <Button asChild variant="outline">
+      <Link to="/super-admin-requests">
+        Access Requests
+      </Link>
+    </Button>
+  ) : null}
+</Card>
         </div>
       </div>
     </div>

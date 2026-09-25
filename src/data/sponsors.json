@@ -1,0 +1,18 @@
+[
+  {
+    "id": "sponsor-1",
+    "name": "Indore Sports Foundation",
+    "category": "Sports Partner",
+    "description": "Supporting grassroots sports, local tournaments and emerging athletes across Indore.",
+    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80",
+    "website": "#"
+  },
+  {
+    "id": "sponsor-2",
+    "name": "Malwa Sports Arena",
+    "category": "Event Partner",
+    "description": "Supporting local sporting events and creating opportunities for athletes to compete and grow.",
+    "image": "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=800&q=80",
+    "website": "#"
+  }
+]

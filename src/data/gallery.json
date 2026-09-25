@@ -1,0 +1,22 @@
+[
+  {
+    "id": "gallery-1",
+    "title": "Indore Local Football Cup",
+    "sport": "Football",
+    "date": "2026-09-28",
+    "location": "Indore, Madhya Pradesh",
+    "coverImage": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1000&q=80",
+    "photoCount": 24,
+    "driveLink": "https://drive.google.com/drive/folders/DEMO_FOOTBALL_FOLDER"
+  },
+  {
+    "id": "gallery-2",
+    "title": "Indore Open Badminton Tournament",
+    "sport": "Badminton",
+    "date": "2026-10-04",
+    "location": "Indore, Madhya Pradesh",
+    "coverImage": "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=1000&q=80",
+    "photoCount": 18,
+    "driveLink": "https://drive.google.com/drive/folders/DEMO_BADMINTON_FOLDER"
+  }
+]

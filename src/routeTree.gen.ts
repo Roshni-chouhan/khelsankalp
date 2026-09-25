@@ -14,17 +14,23 @@ import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as AthletesRouteImport } from './routes/athletes'
 import { Route as AuthRouteImport } from './routes/auth'
+import { Route as CalendarRouteImport } from './routes/calendar'
 import { Route as CampusMapRouteImport } from './routes/campus-map'
 import { Route as CertificatesRouteImport } from './routes/certificates'
 import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as ExploreRouteImport } from './routes/explore'
 import { Route as FacilitiesRouteImport } from './routes/facilities'
+import { Route as FixtureRouteImport } from './routes/fixture'
+import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as ResetPasswordRouteImport } from './routes/reset-password'
+import { Route as ScheduleRouteImport } from './routes/schedule'
+import { Route as SponsorsRouteImport } from './routes/sponsors'
 import { Route as SportsRouteImport } from './routes/sports'
 import { Route as TeamsRouteImport } from './routes/teams'
 import { Route as TournamentsRouteImport } from './routes/tournaments'
 import { Route as AuthenticatedMyDashboardRouteImport } from './routes/_authenticated/my-dashboard'
 import { Route as AuthenticatedPortalRouteImport } from './routes/_authenticated/portal'
+import { Route as AuthenticatedSuperAdminRequestsRouteImport } from './routes/_authenticated/super-admin-requests'
 import { Route as AthletesAthleteIdRouteImport } from './routes/athletes.$athleteId'
 import { Route as SportsSportIdRouteImport } from './routes/sports.$sportId'
 import { Route as TeamsTeamIdRouteImport } from './routes/teams.$teamId'
@@ -54,6 +60,11 @@ const AuthRoute = AuthRouteImport.update({
   path: '/auth',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CalendarRoute = CalendarRouteImport.update({
+  id: '/calendar',
+  path: '/calendar',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CampusMapRoute = CampusMapRouteImport.update({
   id: '/campus-map',
   path: '/campus-map',
@@ -79,9 +90,29 @@ const FacilitiesRoute = FacilitiesRouteImport.update({
   path: '/facilities',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FixtureRoute = FixtureRouteImport.update({
+  id: '/fixture',
+  path: '/fixture',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ResetPasswordRoute = ResetPasswordRouteImport.update({
   id: '/reset-password',
   path: '/reset-password',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScheduleRoute = ScheduleRouteImport.update({
+  id: '/schedule',
+  path: '/schedule',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SponsorsRoute = SponsorsRouteImport.update({
+  id: '/sponsors',
+  path: '/sponsors',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SportsRoute = SportsRouteImport.update({
@@ -110,6 +141,12 @@ const AuthenticatedPortalRoute = AuthenticatedPortalRouteImport.update({
   path: '/portal',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedSuperAdminRequestsRoute =
+  AuthenticatedSuperAdminRequestsRouteImport.update({
+    id: '/super-admin-requests',
+    path: '/super-admin-requests',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
 const AthletesAthleteIdRoute = AthletesAthleteIdRouteImport.update({
   id: '/$athleteId',
   path: '/$athleteId',
@@ -136,17 +173,23 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/athletes': typeof AthletesRouteWithChildren
   '/auth': typeof AuthRoute
+  '/calendar': typeof CalendarRoute
   '/campus-map': typeof CampusMapRoute
   '/certificates': typeof CertificatesRoute
   '/dashboard': typeof DashboardRoute
   '/explore': typeof ExploreRoute
   '/facilities': typeof FacilitiesRoute
+  '/fixture': typeof FixtureRoute
+  '/gallery': typeof GalleryRoute
   '/reset-password': typeof ResetPasswordRoute
+  '/schedule': typeof ScheduleRoute
+  '/sponsors': typeof SponsorsRoute
   '/sports': typeof SportsRouteWithChildren
   '/teams': typeof TeamsRouteWithChildren
   '/tournaments': typeof TournamentsRouteWithChildren
   '/my-dashboard': typeof AuthenticatedMyDashboardRoute
   '/portal': typeof AuthenticatedPortalRoute
+  '/super-admin-requests': typeof AuthenticatedSuperAdminRequestsRoute
   '/athletes/$athleteId': typeof AthletesAthleteIdRoute
   '/sports/$sportId': typeof SportsSportIdRoute
   '/teams/$teamId': typeof TeamsTeamIdRoute
@@ -157,17 +200,23 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/athletes': typeof AthletesRouteWithChildren
   '/auth': typeof AuthRoute
+  '/calendar': typeof CalendarRoute
   '/campus-map': typeof CampusMapRoute
   '/certificates': typeof CertificatesRoute
   '/dashboard': typeof DashboardRoute
   '/explore': typeof ExploreRoute
   '/facilities': typeof FacilitiesRoute
+  '/fixture': typeof FixtureRoute
+  '/gallery': typeof GalleryRoute
   '/reset-password': typeof ResetPasswordRoute
+  '/schedule': typeof ScheduleRoute
+  '/sponsors': typeof SponsorsRoute
   '/sports': typeof SportsRouteWithChildren
   '/teams': typeof TeamsRouteWithChildren
   '/tournaments': typeof TournamentsRouteWithChildren
   '/my-dashboard': typeof AuthenticatedMyDashboardRoute
   '/portal': typeof AuthenticatedPortalRoute
+  '/super-admin-requests': typeof AuthenticatedSuperAdminRequestsRoute
   '/athletes/$athleteId': typeof AthletesAthleteIdRoute
   '/sports/$sportId': typeof SportsSportIdRoute
   '/teams/$teamId': typeof TeamsTeamIdRoute
@@ -180,17 +229,23 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/athletes': typeof AthletesRouteWithChildren
   '/auth': typeof AuthRoute
+  '/calendar': typeof CalendarRoute
   '/campus-map': typeof CampusMapRoute
   '/certificates': typeof CertificatesRoute
   '/dashboard': typeof DashboardRoute
   '/explore': typeof ExploreRoute
   '/facilities': typeof FacilitiesRoute
+  '/fixture': typeof FixtureRoute
+  '/gallery': typeof GalleryRoute
   '/reset-password': typeof ResetPasswordRoute
+  '/schedule': typeof ScheduleRoute
+  '/sponsors': typeof SponsorsRoute
   '/sports': typeof SportsRouteWithChildren
   '/teams': typeof TeamsRouteWithChildren
   '/tournaments': typeof TournamentsRouteWithChildren
   '/_authenticated/my-dashboard': typeof AuthenticatedMyDashboardRoute
   '/_authenticated/portal': typeof AuthenticatedPortalRoute
+  '/_authenticated/super-admin-requests': typeof AuthenticatedSuperAdminRequestsRoute
   '/athletes/$athleteId': typeof AthletesAthleteIdRoute
   '/sports/$sportId': typeof SportsSportIdRoute
   '/teams/$teamId': typeof TeamsTeamIdRoute
@@ -203,17 +258,23 @@ export interface FileRouteTypes {
     | '/about'
     | '/athletes'
     | '/auth'
+    | '/calendar'
     | '/campus-map'
     | '/certificates'
     | '/dashboard'
     | '/explore'
     | '/facilities'
+    | '/fixture'
+    | '/gallery'
     | '/reset-password'
+    | '/schedule'
+    | '/sponsors'
     | '/sports'
     | '/teams'
     | '/tournaments'
     | '/my-dashboard'
     | '/portal'
+    | '/super-admin-requests'
     | '/athletes/$athleteId'
     | '/sports/$sportId'
     | '/teams/$teamId'
@@ -224,17 +285,23 @@ export interface FileRouteTypes {
     | '/about'
     | '/athletes'
     | '/auth'
+    | '/calendar'
     | '/campus-map'
     | '/certificates'
     | '/dashboard'
     | '/explore'
     | '/facilities'
+    | '/fixture'
+    | '/gallery'
     | '/reset-password'
+    | '/schedule'
+    | '/sponsors'
     | '/sports'
     | '/teams'
     | '/tournaments'
     | '/my-dashboard'
     | '/portal'
+    | '/super-admin-requests'
     | '/athletes/$athleteId'
     | '/sports/$sportId'
     | '/teams/$teamId'
@@ -246,17 +313,23 @@ export interface FileRouteTypes {
     | '/about'
     | '/athletes'
     | '/auth'
+    | '/calendar'
     | '/campus-map'
     | '/certificates'
     | '/dashboard'
     | '/explore'
     | '/facilities'
+    | '/fixture'
+    | '/gallery'
     | '/reset-password'
+    | '/schedule'
+    | '/sponsors'
     | '/sports'
     | '/teams'
     | '/tournaments'
     | '/_authenticated/my-dashboard'
     | '/_authenticated/portal'
+    | '/_authenticated/super-admin-requests'
     | '/athletes/$athleteId'
     | '/sports/$sportId'
     | '/teams/$teamId'
@@ -269,12 +342,17 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   AthletesRoute: typeof AthletesRouteWithChildren
   AuthRoute: typeof AuthRoute
+  CalendarRoute: typeof CalendarRoute
   CampusMapRoute: typeof CampusMapRoute
   CertificatesRoute: typeof CertificatesRoute
   DashboardRoute: typeof DashboardRoute
   ExploreRoute: typeof ExploreRoute
   FacilitiesRoute: typeof FacilitiesRoute
+  FixtureRoute: typeof FixtureRoute
+  GalleryRoute: typeof GalleryRoute
   ResetPasswordRoute: typeof ResetPasswordRoute
+  ScheduleRoute: typeof ScheduleRoute
+  SponsorsRoute: typeof SponsorsRoute
   SportsRoute: typeof SportsRouteWithChildren
   TeamsRoute: typeof TeamsRouteWithChildren
   TournamentsRoute: typeof TournamentsRouteWithChildren
@@ -317,6 +395,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/calendar': {
+      id: '/calendar'
+      path: '/calendar'
+      fullPath: '/calendar'
+      preLoaderRoute: typeof CalendarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/campus-map': {
       id: '/campus-map'
       path: '/campus-map'
@@ -352,11 +437,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FacilitiesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/fixture': {
+      id: '/fixture'
+      path: '/fixture'
+      fullPath: '/fixture'
+      preLoaderRoute: typeof FixtureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/reset-password': {
       id: '/reset-password'
       path: '/reset-password'
       fullPath: '/reset-password'
       preLoaderRoute: typeof ResetPasswordRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/schedule': {
+      id: '/schedule'
+      path: '/schedule'
+      fullPath: '/schedule'
+      preLoaderRoute: typeof ScheduleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sponsors': {
+      id: '/sponsors'
+      path: '/sponsors'
+      fullPath: '/sponsors'
+      preLoaderRoute: typeof SponsorsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sports': {
@@ -394,6 +507,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedPortalRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/super-admin-requests': {
+      id: '/_authenticated/super-admin-requests'
+      path: '/super-admin-requests'
+      fullPath: '/super-admin-requests'
+      preLoaderRoute: typeof AuthenticatedSuperAdminRequestsRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/athletes/$athleteId': {
       id: '/athletes/$athleteId'
       path: '/$athleteId'
@@ -428,11 +548,13 @@ declare module '@tanstack/react-router' {
 interface AuthenticatedRouteRouteChildren {
   AuthenticatedMyDashboardRoute: typeof AuthenticatedMyDashboardRoute
   AuthenticatedPortalRoute: typeof AuthenticatedPortalRoute
+  AuthenticatedSuperAdminRequestsRoute: typeof AuthenticatedSuperAdminRequestsRoute
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedMyDashboardRoute: AuthenticatedMyDashboardRoute,
   AuthenticatedPortalRoute: AuthenticatedPortalRoute,
+  AuthenticatedSuperAdminRequestsRoute: AuthenticatedSuperAdminRequestsRoute,
 }
 
 const AuthenticatedRouteRouteWithChildren =
@@ -489,12 +611,17 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   AthletesRoute: AthletesRouteWithChildren,
   AuthRoute: AuthRoute,
+  CalendarRoute: CalendarRoute,
   CampusMapRoute: CampusMapRoute,
   CertificatesRoute: CertificatesRoute,
   DashboardRoute: DashboardRoute,
   ExploreRoute: ExploreRoute,
   FacilitiesRoute: FacilitiesRoute,
+  FixtureRoute: FixtureRoute,
+  GalleryRoute: GalleryRoute,
   ResetPasswordRoute: ResetPasswordRoute,
+  ScheduleRoute: ScheduleRoute,
+  SponsorsRoute: SponsorsRoute,
   SportsRoute: SportsRouteWithChildren,
   TeamsRoute: TeamsRouteWithChildren,
   TournamentsRoute: TournamentsRouteWithChildren,
